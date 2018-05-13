@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Tesla1way</string>
+    <string-array name="city_spinner">
+        <item>City</item>
+        <item>Messechusets</item>
+        <item>Florida</item>
+        <item>New York</item>
+        <item>Texas</item>
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Washington</item>
+    </string-array>
+    <string-array name="state_spinner">
+        <item>State</item>
+        <item>State 1</item>
+        <item>State 2</item>
+        <item>State 3</item>
+    </string-array>
+    <string-array name="country_spinner">
+        <item>Country</item>
+        <item>US</item>
+        <item>UK</item>
+        <item>Australia</item>
+    </string-array>
+
+    <string name="title_activity_maps">Map</string>
+</resources>
