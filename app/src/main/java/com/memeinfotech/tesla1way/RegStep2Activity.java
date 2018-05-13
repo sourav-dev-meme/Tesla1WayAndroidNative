@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -42,18 +43,23 @@ public class RegStep2Activity extends AppCompatActivity
 {
     public EditText zipcode;
     public Spinner spinner, spinner1, spinner2;
+    public CheckBox terms;
+    public Button button;
     public String name, phone, email, password, address, city, state, country, zip, user;
     private ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reg_step2);
         getSupportActionBar().hide();
 
-        zipcode = (EditText) findViewById(R.id.zipcode);
+        button = (Button)findViewById(R.id.button);
+        button.setEnabled(false);
 
+        zipcode = (EditText) findViewById(R.id.zipcode);
         System.out.println("Name trace :------------" + getIntent().getExtras().getString("name"));
         name = getIntent().getExtras().getString("name");
         phone = getIntent().getExtras().getString("phone");
@@ -78,6 +84,27 @@ public class RegStep2Activity extends AppCompatActivity
                 R.array.country_spinner, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
+
+
+
+        CheckBox checkBox = (CheckBox) findViewById(R.id.terms);
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (((CheckBox) v).isChecked()) {
+//                    DisplayToast("CheckBox is checked");
+                    button.setEnabled(true);
+                }
+
+                else {
+//                    DisplayToast("CheckBox is unchecked");
+                    button.setEnabled(false);
+
+                }
+
+
+
+            }
+        });
     }
 
     public void onSubmit(View view)
@@ -87,7 +114,7 @@ public class RegStep2Activity extends AppCompatActivity
         state = spinner1.getSelectedItem().toString();
         zip = zipcode.getText().toString();
 
-        if(city.length() <= 0 || country.length() <= 0 || state.length() <= 0 || zip.length() <= 0)
+        if(city.length() <= 0 || country.length() <= 0 || state.length() <= 0 || zip.length() <=  0)
             return;
 
         RequestParams rp = new RequestParams();
@@ -156,5 +183,11 @@ public class RegStep2Activity extends AppCompatActivity
                 progress.dismiss();
             }
         });
+    }
+
+    //common toast to display message
+
+    private void DisplayToast(String msg) {
+        Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }

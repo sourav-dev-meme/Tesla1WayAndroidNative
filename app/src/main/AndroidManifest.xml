@@ -25,7 +25,7 @@
         <activity android:name=".RegStep1Activity" />
         <activity android:name=".RegStep2Activity" />
         <activity android:name=".OtpStep1Activity" />
-        <activity android:name=".OtpStep2Activity" />
+        <activity android:name=".PassengerDashboard" />
         <activity
             android:name=".BookRideActivity"
             android:label="Bookride" />
@@ -43,7 +43,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="Map Activity"></activity>
+            android:label="Map Activity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -55,7 +55,8 @@
 
         <activity android:name=".LoaderActivity" />
         <activity android:name=".DriverRegStep1Activity" />
-        <activity android:name=".DriverDashboardActivity"></activity>
+        <activity android:name=".DriverDashboardActivity" />
+        <activity android:name=".driverList"></activity>
     </application>
 
 </manifest>

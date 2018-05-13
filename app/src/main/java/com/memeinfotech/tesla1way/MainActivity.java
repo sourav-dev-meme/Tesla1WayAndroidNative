@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import org.json.JSONArray;
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             Intent fp;
 
             if(role.equals("user"))
-                fp = new Intent(MainActivity.this, MapsActivity.class);
+                fp = new Intent(MainActivity.this, PassengerDashboard.class);
             else
                 fp = new Intent(MainActivity.this, DriverDashboardActivity.class);
 
@@ -96,9 +95,6 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject serverResp = new JSONObject(response.toString());
                         System.out.println("success result: " + serverResp);
 
-                        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
-                        SharedPreferences.Editor editor = pref.edit();
-                        editor.putString("store", response.toString());
 
                         String errorStatus = serverResp.getString("error");
                         if(errorStatus.equals("true"))
@@ -108,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else
                         {
+
+                            SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.putString("store", response.toString());
                             String roleName = serverResp.getJSONObject("result").getString("role");
                             editor.putString("role", roleName);
                             editor.putBoolean("loginStatus", true);
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                                 Intent fp;
 
                                 if (role.equals("user"))
-                                    fp = new Intent(MainActivity.this, MapsActivity.class);
+                                    fp = new Intent(MainActivity.this, PassengerDashboard.class);
                                 else
                                     fp = new Intent(MainActivity.this, DriverDashboardActivity.class);
 
