@@ -27,7 +27,8 @@
         android:ems="10"
         android:layout_above="@+id/editText2"
         android:hint="Phone number"
-        android:inputType="number" />
+        android:inputType="number"
+        android:fontFamily= "sans-serif-light"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -39,7 +40,8 @@
         android:ems="10"
         android:layout_above="@+id/button_login"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:fontFamily= "sans-serif-light" />
 
     <Button
         android:id="@+id/button_login"
@@ -53,6 +55,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Notification.Time.Media"
         android:textColor="#ffffff"
         android:textSize="16sp"
+        android:fontFamily= "sans-serif-light"
         android:layout_above="@+id/textView_forgot_password"
         android:textStyle="bold" />
     
@@ -65,7 +68,8 @@
         android:textSize="14sp"
         android:layout_marginBottom="15dp"
         android:layout_above="@+id/registration_ui"
-        android:text="Forgot Password?" />
+        android:text="Forgot Password?"
+        android:fontFamily= "sans-serif-light"/>
 
     <RelativeLayout
         android:id="@+id/registration_ui"
@@ -88,7 +92,8 @@
             android:layout_toStartOf="@+id/relativeLayout2"
             android:text="New Passenger"
             android:onClick="passRegistration"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily= "sans-serif-light" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout2"
@@ -110,6 +115,8 @@
             android:layout_toRightOf="@+id/relativeLayout2"
             android:onClick="driverRegistration"
             android:text="New Driver"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily= "sans-serif-light"/>
     </RelativeLayout>
+
 </RelativeLayout>

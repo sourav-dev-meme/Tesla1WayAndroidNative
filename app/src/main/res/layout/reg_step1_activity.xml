@@ -36,7 +36,7 @@
             android:layout_marginRight="30dp"
             android:id="@+id/nameText"
             android:inputType="text"
-            />
+            android:fontFamily= "sans-serif-light"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,6 +47,7 @@
             android:layout_below="@+id/nameText"
             android:id="@+id/phoneText"
             android:inputType="phone"
+            android:fontFamily= "sans-serif-light"
             />
         <EditText
             android:layout_width="match_parent"
@@ -58,6 +59,7 @@
             android:layout_below="@+id/phoneText"
             android:id="@+id/emailText"
             android:inputType="textEmailAddress"
+            android:fontFamily= "sans-serif-light"
             />
         <EditText
             android:layout_width="match_parent"
@@ -69,6 +71,7 @@
             android:layout_below="@+id/emailText"
             android:id="@+id/passwordText"
             android:inputType="textPassword"
+            android:fontFamily= "sans-serif-light"
             />
         <EditText
             android:layout_width="match_parent"
@@ -80,6 +83,7 @@
             android:layout_below="@+id/passwordText"
             android:id="@+id/addressText"
             android:inputType="text"
+            android:fontFamily= "sans-serif-light"
             />
         <Button
             android:layout_width="wrap_content"
