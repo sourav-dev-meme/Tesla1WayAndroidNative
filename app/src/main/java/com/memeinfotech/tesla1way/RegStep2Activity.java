@@ -22,6 +22,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 import android.content.SharedPreferences;
+import android.widget.Toast;
 
 public class RegStep2Activity extends AppCompatActivity
 {

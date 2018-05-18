@@ -6,6 +6,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -21,10 +22,9 @@
                 android:layout_width="120dp"
                 android:layout_height="60dp"
                 android:src="@drawable/logotesla"
-                android:layout_marginStart="100dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:id="@+id/logo"
-                />
+                android:id="@+id/logo"/>
         </LinearLayout>
 
         <EditText
@@ -59,8 +59,8 @@
             android:layout_below="@+id/phoneText"
             android:id="@+id/emailText"
             android:inputType="textEmailAddress"
-            android:fontFamily= "sans-serif-light"
-            />
+            android:fontFamily= "sans-serif-light"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,8 +71,7 @@
             android:layout_below="@+id/emailText"
             android:id="@+id/passwordText"
             android:inputType="textPassword"
-            android:fontFamily= "sans-serif-light"
-            />
+            android:fontFamily= "sans-serif-light"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,8 +82,7 @@
             android:layout_below="@+id/passwordText"
             android:id="@+id/addressText"
             android:inputType="text"
-            android:fontFamily= "sans-serif-light"
-            />
+            android:fontFamily= "sans-serif-light"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

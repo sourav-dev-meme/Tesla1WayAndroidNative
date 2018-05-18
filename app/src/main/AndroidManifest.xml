@@ -18,7 +18,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -29,34 +28,21 @@
         <activity
             android:name=".BookRideActivity"
             android:label="Bookride" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
+            android:value="AIzaSyCNTQqSoZUzoFvzSOOTvWnQET7S-IcjjW4" />
         <activity
             android:name=".MapsActivity"
-            android:label="Map Activity" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-
-        <activity android:name=".LoaderActivity" />
+            android:label="Map Activity" >
+        </activity>
         <activity android:name=".DriverRegStep1Activity" />
         <activity android:name=".DriverDashboardActivity" />
-        <activity android:name=".driverList"></activity>
+        <activity android:name=".driverList" />
+        <activity android:name=".RideMap">
+        </activity>
+        <activity android:name=".RideType" />
+        <activity android:name=".AirportRide" />
+
     </application>
 
 </manifest>

@@ -19,6 +19,7 @@ public class RegStep1Activity extends AppCompatActivity
         setContentView(R.layout.reg_step1_activity);
         getSupportActionBar().hide();
 
+
         nameEditText = (EditText) findViewById(R.id.nameText);
         phoneEditText = (EditText) findViewById(R.id.phoneText);
         emailEditText = (EditText) findViewById(R.id.emailText);
